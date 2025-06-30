@@ -1,0 +1,84 @@
+PROGRAM:
+
+
+import random
+
+# SmartSDLC class to handle each phase
+class SmartSDLC:
+    def __init__(self, project_name):
+        self.project_name = project_name
+
+    def planning(self):
+        print("\nPlanning Phase:")
+        ai_suggestion = random.choice(["Use Python and java", "Use Node.js and Express"])
+        print(f"AI suggests: {ai_suggestion}")
+
+    def design(self):
+        print("\n Design Phase:")
+        print("Designing simple and scalable architecture...")
+
+    def implementation(self):
+        print("\n Implementation Phase:")
+        print("Writing clean and efficient code with AI help...")
+
+    def testing(self):
+        print("\n Testing Phase:")
+        bugs = random.randint(0, 6)
+        print(f"AI found {bugs} bug(s).")
+        return bugs
+
+    def deployment(self):
+        print("\n Deployment Phase:")
+        print("Application deployed to the cloud successfully.")
+
+    def maintenance(self):
+        print("\n Maintenance Phase:")
+        suggestion = random.choice(["No issues detected", "Performance improvement needed"])
+        print(f"AI Monitoring: {suggestion}")
+
+    def run(self):
+        print(f"\n Starting SMART SDLC for project: {self.project_name}")
+        self.planning()
+        self.design()
+        self.implementation()
+
+        bugs = self.testing()
+        if bugs == 0:
+            self.deployment()
+        else:
+            print("Fixing bugs with AI help...")
+            self.implementation()
+            self.testing()
+            self.deployment()
+
+        self.maintenance()
+        print(f"\n Project '{self.project_name}' completed using SmartSDLC.\n")
+
+
+# Run the process
+if __name__ == "__main__":
+    sdlc = SmartSDLC("Simple App")
+    sdlc.run()
+
+
+OUTPUT:
+
+Starting SMART SDLC for project: Simple App
+Planning Phase:
+AI suggests: Use Python and java
+Design Phase:
+Designing simple and scalable architecture...
+Implementation Phase:
+Writing clean and efficient code with AI help...
+Testing Phase:
+AI found 1 bug(s).
+Fixing bugs with AI help...
+ Implementation Phase:
+Writing clean and efficient code with AI help...
+Testing Phase:
+AI found 3 bug(s).
+Deployment Phase:
+Application deployed to the cloud successfully.
+Maintenance Phase:
+AI Monitoring: No issues detected
+Project 'Simple App' completed using Smart SDLC.
